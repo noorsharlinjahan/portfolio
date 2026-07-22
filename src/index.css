@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Y2K Glam Light — warm lavender-cream base */
+  --background: 280 30% 97%;
+  --foreground: 280 30% 14%;
+  --border: 280 18% 86%;
+  --card: 0 0% 100%;
+  --card-foreground: 280 30% 14%;
+  --card-border: 280 18% 88%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 280 30% 14%;
+  --popover-border: 280 18% 88%;
+  --primary: 336 100% 69%;          /* #ff5fa2 bubblegum pink */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 280 25% 93%;
+  --secondary-foreground: 280 30% 14%;
+  --muted: 280 22% 94%;
+  --muted-foreground: 280 15% 45%;
+  --accent: 270 90% 72%;            /* #b48cff holographic lavender */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 280 20% 92%;
+  --ring: 336 100% 69%;
+  --radius: 0.75rem;
+
+  /* Candy-bright Y2K named tokens */
+  --y2k-pink:    #ff5fa2;  /* bubblegum pink */
+  --y2k-lavender:#b48cff;  /* holographic lavender */
+  --y2k-blue:    #5ec8ff;  /* sky blue */
+  --y2k-mint:    #5edfb0;  /* bright mint */
+  --y2k-gold:    #ffc857;  /* marigold gold */
+  --y2k-sage:    #7fb069;  /* sage green */
+  --y2k-rose:    #ff9de2;  /* soft rose */
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    @apply antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* ─────────────────────────────────────────
+   SPARKLE / GLITTER KEYFRAMES
+   (opacities tuned for light background)
+───────────────────────────────────────── */
+
+/* Standard soft twinkle for dots */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.28; transform: scale(1); }
+  50%       { opacity: 0.60; transform: scale(1.3); }
+}
+
+/* Slow drift for corner characters */
+@keyframes twinkle-slow {
+  0%, 100% { opacity: 0.22; transform: scale(1) rotate(0deg); }
+  50%       { opacity: 0.50; transform: scale(1.15) rotate(12deg); }
+}
+
+/* Sparkle burst — for featured ✦ elements */
+@keyframes sparkle-burst {
+  0%, 100% { opacity: 0.10; transform: scale(0.4) rotate(-10deg); }
+  15%       { opacity: 0.60; transform: scale(1.1) rotate(5deg); }
+  50%       { opacity: 0.38; transform: scale(0.85) rotate(15deg); }
+  85%       { opacity: 0.55; transform: scale(1.05) rotate(-5deg); }
+}
+
+/* Glitter drift — irregular rhythm */
+@keyframes glitter-drift {
+  0%   { opacity: 0.15; transform: scale(0.8) rotate(0deg); }
+  20%  { opacity: 0.58; transform: scale(1.2) rotate(18deg); }
+  45%  { opacity: 0.28; transform: scale(0.9) rotate(-8deg); }
+  70%  { opacity: 0.55; transform: scale(1.1) rotate(22deg); }
+  100% { opacity: 0.15; transform: scale(0.8) rotate(0deg); }
+}
+
+/* Shimmer sweep — for text gradient */
+@keyframes shimmer-sweep {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Iridescent border cycle — vivid for light background */
+@keyframes iridescent {
+  0%   { border-color: rgba(255,95,162,0.50);  box-shadow: 0 0 32px rgba(255,95,162,0.20),  inset 0 0 20px rgba(255,95,162,0.05); }
+  25%  { border-color: rgba(180,140,255,0.50); box-shadow: 0 0 32px rgba(180,140,255,0.20), inset 0 0 20px rgba(180,140,255,0.05); }
+  50%  { border-color: rgba(94,200,255,0.45);  box-shadow: 0 0 32px rgba(94,200,255,0.18),  inset 0 0 20px rgba(94,200,255,0.05); }
+  75%  { border-color: rgba(127,176,105,0.42); box-shadow: 0 0 32px rgba(127,176,105,0.16), inset 0 0 20px rgba(127,176,105,0.04); }
+  100% { border-color: rgba(255,95,162,0.50);  box-shadow: 0 0 32px rgba(255,95,162,0.20),  inset 0 0 20px rgba(255,95,162,0.05); }
+}
+
+/* ─────────────────────────────────────────
+   UTILITY CLASSES
+───────────────────────────────────────── */
+
+/* Shimmer gradient text — vivid candy colors for light background */
+.shimmer-text {
+  background: linear-gradient(90deg,
+    #ff5fa2 0%,
+    #b48cff 25%,
+    #5ec8ff 50%,
+    #ffc857 75%,
+    #ff5fa2 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer-sweep 5s linear infinite;
+}
+
+/* Iridescent card border */
+.iridescent-card {
+  animation: iridescent 8s ease-in-out infinite;
+}
+
+/* Art card hover glow — vivid against light base */
+.art-card-glow {
+  transition: box-shadow 0.35s ease, transform 0.25s ease;
+}
+.art-card-glow:hover {
+  box-shadow:
+    0 0 0 2px rgba(255,95,162,0.30),
+    0 12px 48px rgba(180,140,255,0.22),
+    0 4px 12px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+
+/* Thin gold divider lines */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffc857 20%, #b48cff 50%, #ffc857 80%, transparent);
+  opacity: 0.55;
+}

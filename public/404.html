@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks the path and redirects the browser to the root
+      // URL with the path encoded in the query string.
+
+      var l = window.location;
+
+      // Set to 1 if deploying to a Project Page (e.g., username.github.io/repo-name/)
+      // Set to 0 if deploying to a User Page (e.g., username.github.io/) or a custom domain.
+      var pathSegmentsToKeep = 0;
+
+      // Smart auto-detection of repository subpath:
+      if (l.hostname.indexOf('.github.io') !== -1) {
+        var pathSegments = l.pathname.split('/').filter(Boolean);
+        // If the first path segment is NOT a known page route, it is likely the repo name
+        var knownPages = ['photography', 'writing', 'photo-detail', 'writing-detail'];
+        if (pathSegments.length > 0 && knownPages.indexOf(pathSegments[0]) === -1) {
+          pathSegmentsToKeep = 1;
+        }
+      }
+
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <!-- Redirecting... -->
+  </body>
+</html>
