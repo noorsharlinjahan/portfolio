@@ -21,103 +21,13 @@ export type Article = {
 export const photos: Photo[] = [
   {
     id: 'film-street-1',
-    title: 'Morning Fog',
+    title: 'Sample Title',
     year: '2022',
     medium: '35mm Tri-X 400',
-    url: '/images/film-street-1.png',
+    url: '/uploads/1b7bc661-358c-44cd-b889-0ed370af80ab.jpg',
     category: 'film',
     aspectRatio: 'portrait',
-    caption: 'Captured in the early morning hours on Tri-X 400, this frame uses grain as texture rather than limitation—the silver halides rendering mist as a material presence that dissolves architectural lines into atmosphere. A meditation on the city before it performs itself for the day.'
-  },
-  {
-    id: 'film-portrait-1',
-    title: 'A Gaze Averted',
-    year: '2021',
-    medium: 'Medium Format Portra 400',
-    url: '/images/film-portrait-1.png',
-    category: 'film',
-    aspectRatio: 'portrait',
-    caption: 'Shot on Portra 400\'s warm emulsion, the deflected gaze here refuses the viewer\'s possession. There is a quiet sovereignty in not looking back—a decision the subject holds in the frame. Medium format\'s compression of depth keeps the background in respectful obscurity.'
-  },
-  {
-    id: 'film-landscape-1',
-    title: 'Coastline',
-    year: '2019',
-    medium: 'Medium Format Ilford HP5',
-    url: '/images/film-landscape-1.png',
-    category: 'film',
-    aspectRatio: 'landscape',
-    caption: 'Ilford HP5 strips colour from a coastline to isolate geometry: the horizon as fundamental line, land as counter-argument to sea. High contrast black-and-white demands that the viewer attend to structure rather than spectacle. The edge of things, made plain.'
-  },
-  {
-    id: 'film-arch-1',
-    title: 'Concrete Angles',
-    year: '2023',
-    medium: '35mm T-Max 100',
-    url: '/images/film-arch-1.png',
-    category: 'film',
-    aspectRatio: 'portrait',
-    caption: 'T-Max 100\'s fine grain suits the precision of brutalist concrete—each surface a study in how institutional power encodes itself into built form. Architecture photographed not as backdrop but as primary document: ideology fixed onto acetate.'
-  },
-  {
-    id: 'film-still-1',
-    title: 'Afternoon Light',
-    year: '2023',
-    medium: '35mm Gold 200',
-    url: '/images/film-still-1.png',
-    category: 'film',
-    aspectRatio: 'square',
-    caption: 'Kodak Gold 200\'s amber rendering transforms brief afternoon light into something almost material. A still life in available light, this image attends to the ordinary moment before it dissolves—the chemical chance that makes the unremarkable luminous.'
-  },
-  {
-    id: 'digital-portrait-1',
-    title: 'Lines of Time',
-    year: '2024',
-    medium: 'Digital',
-    url: '/images/digital-portrait-1.png',
-    category: 'digital',
-    aspectRatio: 'portrait',
-    caption: 'A study in the legibility of time on a human face, captured digitally for the precision with which the sensor resolves shadow and surface. The image asks how much of identity resides in the body\'s exterior record—and what a lens can honestly retrieve from it.'
-  },
-  {
-    id: 'digital-landscape-1',
-    title: 'Blue Hour Over The Valley',
-    year: '2024',
-    medium: 'Digital',
-    url: '/images/digital-landscape-1.png',
-    category: 'digital',
-    aspectRatio: 'landscape',
-    caption: 'The blue hour—that transitional window between last light and full dark—photographed digitally for its capacity to render the full tonal range of liminal atmosphere. A meditation on the interval that both film and memory tend to compress or skip entirely.'
-  },
-  {
-    id: 'digital-arch-1',
-    title: 'Gallery Space',
-    year: '2023',
-    medium: 'Digital',
-    url: '/images/digital-arch-1.png',
-    category: 'digital',
-    aspectRatio: 'portrait',
-    caption: 'An empty gallery photographed as subject rather than setting. The white cube, climate-controlled and socially encoded, becomes the artwork when stripped of its contents. Institutional space as visual argument: what a room says when it has nothing left to display.'
-  },
-  {
-    id: 'digital-street-1',
-    title: 'Neon Walk',
-    year: '2023',
-    medium: 'Digital',
-    url: '/images/digital-street-1.png',
-    category: 'digital',
-    aspectRatio: 'landscape',
-    caption: 'Urban neon at night, recorded by a sensor calibrated to artificial light. The image explores the visual grammar of the contemporary city—saturated, fragmented, perpetually illuminated—and asks what it means to archive a vernacular aesthetic never designed to be still.'
-  },
-  {
-    id: 'digital-nature-1',
-    title: 'Skeleton Leaf',
-    year: '2024',
-    medium: 'Digital',
-    url: '/images/digital-nature-1.png',
-    category: 'digital',
-    aspectRatio: 'square',
-    caption: 'A decomposed leaf, its vascular structure exposed by time and entropy, photographed in macro for precision of structural detail. Nature\'s own archiving practice: the dissolution that reveals the framework that made the whole thing possible.'
+    caption: 'Sample Photo'
   }
 ];
 
